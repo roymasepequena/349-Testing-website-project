@@ -50,7 +50,7 @@ const questions = [
     }
 ]
 
-let shuffleQuestions, currentQuestion
+let shuffleQuestions, currentQuestion, score = 0
 
 startButton.addEventListener('click', startQuizze);
 nextButton.addEventListener('click', () => {
@@ -60,6 +60,8 @@ nextButton.addEventListener('click', () => {
 
 function startQuizze() {
     console.log("it works")
+    score = 0
+    updateScore()
     startButton.classList.add('hidden')
     shuffleQuestions = questions.sort(() => Math.random() - .5)
     currentQuestion = 0
@@ -100,6 +102,10 @@ function chooseAnswer(e){
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatus(button, button.dataset.correct)
     })
+    if (correct) {
+        score++
+        updateScore()
+    }
     if (shuffleQuestions.length > currentQuestion + 1){
         nextButton.classList.remove('hidden')
     } else {
@@ -120,4 +126,20 @@ function setStatus(element, correct) {
 function clearStatus(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
+}
+
+function updateScore() {
+    const scoreDisplay = document.querySelector('#scoreDisplay')
+    if (scoreDisplay) {
+        scoreDisplay.innerText = `Score: ${score} / ${questions.length}`
+    }
+    // scoreDisplay.innerText = `Score: ${score} / ${questions.length}`
+    // questionBoxElement.appendChild(scoreDisplay)
+}
+
+function showResult() {
+    const scoreDisplay = document.querySelector('#scoreResult')
+    if (scoreDisplay) {
+        scoreDisplay.innerText = `Score: ${score} / ${questions.length}`
+    }
 }

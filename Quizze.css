@@ -45,8 +45,19 @@ body.wrong{
 }
 
 .btn:hover {
-    border-color: white;
+    /* border-color: white; */
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(127, 40, 40, 0.5);
+    transform: scale(1.1);
+    transition: transform 150ms;
 }
+
+.btn:[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
 
 .btn.correct {
     background-color:rgb(103, 201, 4);
@@ -55,6 +66,19 @@ body.wrong{
 .btn.wrong {
     background-color:rgb(239, 0, 0);
 }
+
+.btn.score {
+    font-size: 2.4rem;
+    padding: 2rem 0.5rem;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: black;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
 
 .start-btn, .next-btn {
     font-size: 1rem;
@@ -77,4 +101,61 @@ body.wrong{
     font-weight: 600;
     padding: 10px 20px;
 
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+#scoreDisplay{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: black;
+    text-align: center;
+}
+
+#scoreResult{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: black;
+    text-align: center;
+}
+
+#scores-btn {
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+#scores-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(127, 40, 40, 0.5);
+    /* transform: scale(1.1);
+    transition: transform 150ms; */
+}
+
+#homePage{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: black;
+    text-align: center;
 }
