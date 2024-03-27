@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script defer src="script.js"></script>
+    <title>Quizze</title>
+</head>
+<body class="home">
+    <div class="quizze-header">
+        <nav class="navbar navbar-default" style="background-color: #cc0000ff;">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="images/quizzelogo.png" style="width:182px; height:49px; margin-top:10px; margin-left:15px"></a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Quizzes</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Log In</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <form class="form-container">
+                                    <h1>Log In</h1>
+                                    <label for="email"><b>Email</b></label>
+                                    <input type="text" placeholder="Enter Email" name="email">
+                                    <label for="psw"><b>Password</b></label>
+                                    <input type="password" placeholder="Enter Password" name="psw">
+                                    <button type="submit" class="btn">Login</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Sign Up</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <form class="form-container">
+                                    <h1>Sign Up</h1>
+                                    <label for="email"><b>Email</b></label>
+                                    <input type="text" placeholder="Enter Email" name="email">
+                                    <label for="psw"><b>Password</b></label>
+                                    <input type="password" placeholder="Enter Password" name="psw">
+                                    <button type="submit" class="btn">Sign Up</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+        </nav>
+    </div>
+    <div class = "welcome">
+        <h1 style="font-size: 120px;">Learn better with Quizze!</h1>
+    </div>
+    <button class="button-4" role="button">Try a quiz!</button>
+</body>
+</html>

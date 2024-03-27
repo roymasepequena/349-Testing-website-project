@@ -50,7 +50,7 @@ const questions = [
     }
 ]
 
-let shuffleQuestions, currentQuestion, score = 0
+let shuffleQuestions, currentQuestion
 
 startButton.addEventListener('click', startQuizze);
 nextButton.addEventListener('click', () => {
@@ -60,8 +60,6 @@ nextButton.addEventListener('click', () => {
 
 function startQuizze() {
     console.log("it works")
-    score = 0
-    updateScore()
     startButton.classList.add('hidden')
     shuffleQuestions = questions.sort(() => Math.random() - .5)
     currentQuestion = 0
@@ -102,10 +100,6 @@ function chooseAnswer(e){
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatus(button, button.dataset.correct)
     })
-    if (correct) {
-        score++
-        updateScore()
-    }
     if (shuffleQuestions.length > currentQuestion + 1){
         nextButton.classList.remove('hidden')
     } else {
@@ -128,18 +122,20 @@ function clearStatus(element) {
     element.classList.remove('wrong')
 }
 
-function updateScore() {
-    const scoreDisplay = document.querySelector('#scoreDisplay')
-    if (scoreDisplay) {
-        scoreDisplay.innerText = `Score: ${score} / ${questions.length}`
+function myFunction() {
+    document.getElementById("dropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
     }
-    // scoreDisplay.innerText = `Score: ${score} / ${questions.length}`
-    // questionBoxElement.appendChild(scoreDisplay)
-}
-
-function showResult() {
-    const scoreDisplay = document.querySelector('#scoreResult')
-    if (scoreDisplay) {
-        scoreDisplay.innerText = `Score: ${score} / ${questions.length}`
-    }
-}
+  }
