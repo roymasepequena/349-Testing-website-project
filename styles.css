@@ -142,7 +142,7 @@
   font-family: "Paytone One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  max-width: 900px;
+  max-width: 50vw;
   margin-left: 60px;
 }
 
@@ -166,11 +166,11 @@
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  font-size: 70px;
+  font-size: 4vw;
   font-weight: bold;
   line-height: 20px;
   list-style: none;
-  padding: 55px 80px;
+  padding: 3vw;
   position: relative;
   transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
   user-select: none;
@@ -179,7 +179,8 @@
   vertical-align: middle;
   white-space: nowrap;
   word-wrap: break-word;
-  margin: 60px;
+  margin-left: 60px;
+  margin-top: 30px;
 }
 
 .button-4:hover {
