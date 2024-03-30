@@ -6,9 +6,9 @@
  // When the user clicks anywhere outside of the modal, close it
  window.onclick = function(event) {
      if (event.target == login) {
-         modal.style.display = "none";
+         login.style.display = "none";
      }
      if (event.target == signup) {
-         modal.style.display = "none";
+         signup.style.display = "none";
      }
  }
