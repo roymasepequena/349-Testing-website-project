@@ -109,6 +109,7 @@
 }
 
 /*Header*/
+
 .navbar { 
   height: 100px; 
   border-color: #cc0000ff;
@@ -136,7 +137,7 @@
   color: lightgrey;
 }
 
-/*Welcome*/
+/* Home-- Welcome */
 .welcome{
   color: rgb(83, 83, 83);
   font-family: "Paytone One", sans-serif;
@@ -144,6 +145,7 @@
   font-style: normal;
   max-width: 50vw;
   margin-left: 60px;
+  text-align: left;
 }
 
 .home{
@@ -155,7 +157,7 @@
 }
 
 /* Home -- Try Quiz Button */
-.button-4 {
+.home-button {
   appearance: none;
   background-color: #FF4742;
   border: 1px solid rgba(27, 31, 35, 0.15);
@@ -183,35 +185,122 @@
   margin-top: 30px;
 }
 
-.button-4:hover {
+.home-button:hover {
   background-color: #F3F4F6;
   color: #FF4742;
   text-decoration: none;
   transition-duration: 0.1s;
 }
 
-.button-4:disabled {
+.home-button:disabled {
   background-color: #FAFBFC;
   border-color: rgba(27, 31, 35, 0.15);
   color: #959DA5;
   cursor: default;
 }
 
-.button-4:active {
+.home-button:active {
   background-color: #EDEFF2;
   box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
   transition: none 0s;
 }
 
-.button-4:focus {
+.home-button:focus {
   outline: 1px transparent;
 }
 
-.button-4:before {
+.home-button:before {
   display: none;
 }
 
-.button-4:-webkit-details-marker {
+.home-button:-webkit-details-marker {
   display: none;
 }
 
+/* Quizzes Menu */
+.quizzes-menu
+{
+    color: rgb(83, 83, 83);
+    font-family: "Paytone One", sans-serif; 
+    font-weight: 400;
+    font-style: normal;
+    max-width: 50vw;
+    margin-left: 30px;
+    text-align: left;
+}
+
+#quiz-button
+{
+    color: rgb(83, 83, 83);
+    font-family: "Paytone One", sans-serif; 
+    max-width:80vw;
+    margin: auto;
+    margin-top: 5vh;
+    height: 15vh;
+    font-size: 6vh;
+    border-radius: 12px;
+    text-align: left !important;
+}
+
+  /* Home -- Try Quiz Button */
+  .quizzes-button {
+    appearance: none;
+    background-color: #eeeeeeff;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 12px;
+    border-width: 2px;
+    border-color: rgb(83, 83, 83);;
+    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+    color: rgb(83, 83, 83);
+    cursor: pointer;
+    font-family: "Paytone One", sans-serif; 
+    font-size: 3.5vw;
+    height: 15vh;
+    width: 80vw;
+    list-style: none;
+    position: relative;
+    transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-wrap: break-word;
+    margin: auto;
+    max-width: 80vw;
+    text-align: left !important; 
+    margin-top: 3vh;
+    text-indent: 2vw;
+  }
+  
+  .quizzes-button:hover {
+    background-color:#FF4742;
+    color: #F3F4F6;
+    text-decoration: none;
+    transition-duration: 0.1s;
+  }
+  
+  .quizzes-button:disabled {
+    background-color: #eeeeeeff;
+    border-color: rgba(27, 31, 35, 0.15);
+    color: FF4742;
+    cursor: default;
+  }
+  
+  .quizzes-button:active {
+    background-color: #eeeeeeff;
+    box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+    transition: none 0s;
+  }
+  
+  .quizzes-button:focus {
+    outline: 1px transparent;
+  }
+  
+  .quizzes-button:before {
+    display: none;
+  }
+  
+  .quizzes-button:-webkit-details-marker {
+    display: none;
+  }
