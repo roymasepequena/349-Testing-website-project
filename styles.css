@@ -397,7 +397,7 @@ input[type=text], input[type=password] {
     max-width: 30rem;
   }
   
-  end-form-Container input {
+  .end-form-Container input {
     margin-bottom: 1rem;
     width: 20rem;
     padding: 1.5rem;
