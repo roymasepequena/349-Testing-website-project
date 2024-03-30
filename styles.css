@@ -52,7 +52,7 @@
     background-color:rgb(239, 0, 0);
 }
 
-.start-btn, .next-btn, .reset-btn{
+.start-btn, .next-btn {
     font-size: 1rem;
     font-weight: bold;
     padding: 10px 20px;
@@ -72,43 +72,10 @@
     font-size: 2rem;
     font-weight: 600;
     padding: 10px 20px;
-
-}
-
-/*Login*/
-.form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
-}
-
-.form-container input[type=text], .form-container input[type=password] {
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-}
-
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-.form-container .btn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  margin-bottom:10px;
-  opacity: 0.8;
-}
-
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
 }
 
 /*Header*/
+
 .navbar { 
   height: 100px; 
   border-color: #cc0000ff;
@@ -124,10 +91,6 @@
   margin: 25px;
 }
 
-.dropdown-toggle {
-  max-width: 300px;
-}
-
 .nav.navbar-nav.navbar-right li a {
   color: white;
 }
@@ -135,6 +98,140 @@
 .nav.navbar-nav.navbar-right li a:hover {
   color: lightgrey;
 }
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  .form-button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .login-container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+
+  .header-button
+  {
+    border:none;
+    background-color: #cc0000ff;
+    color:white;
+  }
+
+  .header-button:hover
+  {
+    color: lightgrey;
+  }
 
 /* Home-- Welcome */
 .welcome{
@@ -228,20 +325,6 @@
     text-align: left;
 }
 
-#quiz-button
-{
-    color: rgb(83, 83, 83);
-    font-family: "Paytone One", sans-serif; 
-    max-width:80vw;
-    margin: auto;
-    margin-top: 5vh;
-    height: 15vh;
-    font-size: 6vh;
-    border-radius: 12px;
-    text-align: left !important;
-}
-
-  /* Home -- Try Quiz Button */
   .quizzes-button {
     appearance: none;
     background-color: #eeeeeeff;
@@ -271,90 +354,90 @@
     margin-top: 3vh;
     text-indent: 2vw;
   }
-
+  
   .quizzes-button:hover {
     background-color:#FF4742;
     color: #F3F4F6;
     text-decoration: none;
     transition-duration: 0.1s;
   }
-
+  
   .quizzes-button:disabled {
     background-color: #eeeeeeff;
     border-color: rgba(27, 31, 35, 0.15);
     color: FF4742;
     cursor: default;
   }
-
+  
   .quizzes-button:active {
     background-color: #eeeeeeff;
     box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
     transition: none 0s;
   }
-
+  
   .quizzes-button:focus {
     outline: 1px transparent;
   }
-
+  
   .quizzes-button:before {
     display: none;
   }
-
+  
   .quizzes-button:-webkit-details-marker {
     display: none;
   }
 
+
 /* Scoreboard Page */
 .end-form-Container{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 30rem;
-}
-
-end-form-Container input {
-  margin-bottom: 1rem;
-  width: 20rem;
-  padding: 1.5rem;
-  font-size: 1.8rem;
-  border: none;
-  box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
-}
-
-.end-form-Container input::placeholder {
-  color: #aaa;
-}
-
-#endText {
-  font-size: 2.4rem;
-  color: #fff;
-  text-align: center;
-}
-
-#scoreDisplay{
-  color: rgb(83, 83, 83);
-  font-family: "Paytone One", sans-serif;
-  font-weight: 400;
-}
-#username {
-  margin-bottom: 3rem;
-  width: 100%;
-  outline: none;
-}
-
-#saveScoreBtn {
-  font-size: 1.8rem;
-  border: none;
-}
-
-#highScoresList {
-  list-style: none;
-  margin-bottom: 4rem;
-}
-
-.high-score {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-}
-
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+  }
+  
+  end-form-Container input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  }
+  
+  .end-form-Container input::placeholder {
+    color: #aaa;
+  }
+  
+  #endText {
+    font-size: 2.4rem;
+    color: #fff;
+    text-align: center;
+  }
+  
+  #scoreDisplay{
+    color: rgb(83, 83, 83);
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+  }
+  #username {
+    margin-bottom: 3rem;
+    width: 100%;
+    outline: none;
+  }
+  
+  #saveScoreBtn {
+    font-size: 1.8rem;
+    border: none;
+  }
+  
+  #highScoresList {
+    list-style: none;
+    margin-bottom: 4rem;
+  }
+  
+  .high-score {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+  }

@@ -18,38 +18,69 @@
                     <a class="navbar-brand" href="home.html"><img src="images/quizzelogo.png" style="width:182px; height:49px; margin-top:10px; margin-left:15px"></a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="quizzes.html">Quizzes</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Log In</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <form class="form-container">
-                                    <h1>Log In</h1>
-                                    <label for="email"><b>Email</b></label>
-                                    <input type="text" placeholder="Enter Email" name="email">
-                                    <label for="psw"><b>Password</b></label>
-                                    <input type="password" placeholder="Enter Password" name="psw">
-                                    <button type="submit" class="btn">Login</button>
-                                </form>
-                            </li>
-                        </ul>
+                    <li>
+                        <a href="quizzes.html"><button class="header-button" onclick="document.getElementById('quizzes-button').style.display='block'" 
+                            style="width:auto;">Quizzes</button></a>
                     </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Sign Up</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <form class="form-container">
-                                    <h1>Sign Up</h1>
-                                    <label for="email"><b>Email</b></label>
-                                    <input type="text" placeholder="Enter Email" name="email">
-                                    <label for="psw"><b>Password</b></label>
-                                    <input type="password" placeholder="Enter Password" name="psw">
-                                    <button type="submit" class="btn">Sign Up</button>
-                                </form>
-                            </li>
-                        </ul>
+                    <li>
+                        <a href="#"><button class="header-button" onclick="document.getElementById('login-button').style.display='block'" 
+                            style="width:auto;">Login</button></a>
+                    </li>
+                    <li>
+                        <a href="#"><button class="header-button" onclick="document.getElementById('signup-button').style.display='block'" 
+                            style="width:auto;">Sign Up</button></a>
                     </li>
                 </ul>
+                <div id="login-button" class="modal">
+  
+                    <form class="modal-content animate">
+                      <div class="imgcontainer">
+                        <span onclick="document.getElementById('login-button').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <img src="images/quizzered.png" alt="Avatar" class="avatar">
+                      </div>
+                  
+                      <div class="login-container">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+                  
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                          
+                        <a href="quizzes.html"><button class="form-button">Login</button></a>
+                        <label>
+                          <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                      </div>
+                  
+                      <div class="login-container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('login-button').style.display='none'" class="cancelbtn">Cancel</button>
+                        <span class="psw"><a href="#">Forgot password?</a></span>
+                      </div>
+                    </form>
+                    </div>
+                <div id = "signup-button" class="modal">
+
+                    <form class="modal-content animate">
+                        <div class="imgcontainer">
+                          <span onclick="document.getElementById('signup-button').style.display='none'" class="close" title="Close Modal">&times;</span>
+                          <img src="images/quizzered.png" alt="Avatar" class="avatar">
+                        </div>
+                    
+                        <div class="login-container">
+                          <label for="uname"><b>Username</b></label>
+                          <input type="text" placeholder="Enter Username" name="uname" required>
+                    
+                          <label for="psw"><b>Password</b></label>
+                          <input type="password" placeholder="Enter Password" name="psw" required>
+                            
+                          <a href="quizzes.html"><button class="form-button">Sign Up</button></a>
+                        </div>
+                    
+                        <div class="login-container" style="background-color:#f1f1f1">
+                          <button type="button" onclick="document.getElementById('login-button').style.display='none'" class="cancelbtn">Cancel</button>
+                        </div>
+                      </form>
+                </div>
         </nav>
     </div>
     <div class = "quiz">

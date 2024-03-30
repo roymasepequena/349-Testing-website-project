@@ -71,14 +71,6 @@ function startQuizze() {
     nextQuestion()
 }
 
-// function nextQuestion(){
-//     resetState()
-//     showQuestion(shuffleQuestions[currentQuestion])
-//     if (currentQuestion === shuffleQuestions.length - 1) {
-//         nextButton.innerText = 'Submit'
-//     }
-// }
-
 function nextQuestion() {
     if(currentQuestion >= shuffleQuestions.length){
         localStorage.setItem('mostRecentScore', score)
@@ -124,21 +116,11 @@ function chooseAnswer(e){
     })
     nextQuestion()
 
-    // if (shuffleQuestions.length > currentQuestion + 1){
-    //     nextButton.classList.remove('hidden')
-    // } else {
-    //     startButton.innerText = 'Restart'
-    //     startButton.classList.remove('hidden')
-    // }
 }
 
 function updateScore() {
     scoreDisplay.innerText = score + '/' + questions.length
 }
-
-// function updateScore(){
-//     scoreDisplay.innerText = 'Score: ${score}'
-// }
 
 
 
@@ -156,20 +138,17 @@ function clearStatus(element) {
     element.classList.remove('wrong')
 }
 
-function myFunction() {
-    document.getElementById("dropdown").classList.toggle("show");
-  }
+  // Get the modal
+  var login = document.getElementById('login-button');
+  var signup = document.getElementById('signup-button');
   
-  // Close the dropdown menu if the user clicks outside of it
+  
+  // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
+      if (event.target == login) {
+          modal.style.display = "none";
       }
-    }
+      if (event.target == signup) {
+          modal.style.display = "none";
+      }
   }
