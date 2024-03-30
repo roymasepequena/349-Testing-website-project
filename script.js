@@ -3,6 +3,8 @@ const nextButton = document.getElementById('next-btn')
 const questionBoxElement = document.getElementById('question-box')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-btns')
+const scoreDisplay = document.getElementById('scoreDisplay')
+
 
 const questions = [
     {
@@ -49,7 +51,7 @@ const questions = [
         ]
     }
 ]
-
+let score = 0
 let shuffleQuestions, currentQuestion
 
 startButton.addEventListener('click', startQuizze);
@@ -61,15 +63,31 @@ nextButton.addEventListener('click', () => {
 function startQuizze() {
     console.log("it works")
     startButton.classList.add('hidden')
+    score = 0
+    updateScore()
     shuffleQuestions = questions.sort(() => Math.random() - .5)
     currentQuestion = 0
     questionBoxElement.classList.remove('hidden')
     nextQuestion()
 }
 
-function nextQuestion(){
+// function nextQuestion(){
+//     resetState()
+//     showQuestion(shuffleQuestions[currentQuestion])
+//     if (currentQuestion === shuffleQuestions.length - 1) {
+//         nextButton.innerText = 'Submit'
+//     }
+// }
+
+function nextQuestion() {
+    if(currentQuestion >= shuffleQuestions.length){
+        localStorage.setItem('mostRecentScore', score)
+        return window.location.assign('end.html')
+    }
     resetState()
     showQuestion(shuffleQuestions[currentQuestion])
+    currentQuestion++
+
 }
 
 function showQuestion(question) {
@@ -96,17 +114,33 @@ function resetState() {
 function chooseAnswer(e){
     const clickedButton = e.target
     const correct = clickedButton.dataset.correct
+    if(correct){
+        score++
+        updateScore()
+    }
     setStatus(document.body, correct)
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatus(button, button.dataset.correct)
     })
-    if (shuffleQuestions.length > currentQuestion + 1){
-        nextButton.classList.remove('hidden')
-    } else {
-        startButton.innerText = 'Restart'
-        startButton.classList.remove('hidden')
-    }
+    nextQuestion()
+
+    // if (shuffleQuestions.length > currentQuestion + 1){
+    //     nextButton.classList.remove('hidden')
+    // } else {
+    //     startButton.innerText = 'Restart'
+    //     startButton.classList.remove('hidden')
+    // }
 }
+
+function updateScore() {
+    scoreDisplay.innerText = score + '/' + questions.length
+}
+
+// function updateScore(){
+//     scoreDisplay.innerText = 'Score: ${score}'
+// }
+
+
 
 function setStatus(element, correct) {
     clearStatus(element)

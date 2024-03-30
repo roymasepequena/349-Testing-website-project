@@ -52,7 +52,7 @@
     background-color:rgb(239, 0, 0);
 }
 
-.start-btn, .next-btn {
+.start-btn, .next-btn, .reset-btn{
     font-size: 1rem;
     font-weight: bold;
     padding: 10px 20px;
@@ -109,7 +109,6 @@
 }
 
 /*Header*/
-
 .navbar { 
   height: 100px; 
   border-color: #cc0000ff;
@@ -272,35 +271,90 @@
     margin-top: 3vh;
     text-indent: 2vw;
   }
-  
+
   .quizzes-button:hover {
     background-color:#FF4742;
     color: #F3F4F6;
     text-decoration: none;
     transition-duration: 0.1s;
   }
-  
+
   .quizzes-button:disabled {
     background-color: #eeeeeeff;
     border-color: rgba(27, 31, 35, 0.15);
     color: FF4742;
     cursor: default;
   }
-  
+
   .quizzes-button:active {
     background-color: #eeeeeeff;
     box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
     transition: none 0s;
   }
-  
+
   .quizzes-button:focus {
     outline: 1px transparent;
   }
-  
+
   .quizzes-button:before {
     display: none;
   }
-  
+
   .quizzes-button:-webkit-details-marker {
     display: none;
   }
+
+/* Scoreboard Page */
+.end-form-Container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 30rem;
+}
+
+end-form-Container input {
+  margin-bottom: 1rem;
+  width: 20rem;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  border: none;
+  box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+}
+
+.end-form-Container input::placeholder {
+  color: #aaa;
+}
+
+#endText {
+  font-size: 2.4rem;
+  color: #fff;
+  text-align: center;
+}
+
+#scoreDisplay{
+  color: rgb(83, 83, 83);
+  font-family: "Paytone One", sans-serif;
+  font-weight: 400;
+}
+#username {
+  margin-bottom: 3rem;
+  width: 100%;
+  outline: none;
+}
+
+#saveScoreBtn {
+  font-size: 1.8rem;
+  border: none;
+}
+
+#highScoresList {
+  list-style: none;
+  margin-bottom: 4rem;
+}
+
+.high-score {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
