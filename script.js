@@ -3,7 +3,8 @@ const nextButton = document.getElementById('next-btn')
 const questionBoxElement = document.getElementById('question-box')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-btns')
-const scoreDisplay = document.getElementById('scoreDisplay')
+const scoreDisplay = document.getElementById('score')
+const progressBarFull = document.querySelector('#progressBarFull')
 
 
 const questions = [
@@ -51,13 +52,19 @@ const questions = [
         ]
     }
 ]
+
+const SCORE_POINTS = 10
+const MAX_QUESTIONS = 5
 let score = 0
 let shuffleQuestions, currentQuestion
+let availableQuestions = []
+
 
 startButton.addEventListener('click', startQuizze);
 nextButton.addEventListener('click', () => {
     currentQuestion++
     nextQuestion()
+
 })
 
 function startQuizze() {
@@ -78,7 +85,7 @@ function nextQuestion() {
     resetState()
     showQuestion(shuffleQuestions[currentQuestion])
     currentQuestion++
-
+    updateprogressBarFull()
 }
 
 function showQuestion(question) {
@@ -114,13 +121,17 @@ function chooseAnswer(e){
         setStatus(button, button.dataset.correct)
     })
     nextQuestion()
-
 }
 
 function updateScore() {
     scoreDisplay.innerText = score + '/' + questions.length
 }
 
+function updateprogressBarFull() {
+    const progress = Math.round((currentQuestion / questions.length) * 100)
+    progressBarFull.style.width = `${progress}%`
+    scoreDisplay.innerText = score + '/' + questions.length
+}
 
 
 function setStatus(element, correct) {

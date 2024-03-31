@@ -76,6 +76,7 @@
     font-size: 2rem;
     font-weight: 600;
     padding: 10px 20px;
+    text-align: center;
 }
 
 /*Header*/
@@ -248,7 +249,7 @@ input[type=text], input[type=password] {
   text-align: left;
 }
 
-body{
+.body{
   background-image: url('images/background.png');
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -357,6 +358,7 @@ body{
     text-align: left !important; 
     margin-top: 3vh;
     text-indent: 2vw;
+    padding: 10px;
   }
   
   .quizzes-button:hover {
@@ -399,55 +401,138 @@ body{
 
 
 /* Scoreboard Page */
-.end-form-Container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 30rem;
-  }
-  
-  .end-form-Container input {
-    margin-bottom: 1rem;
-    width: 20rem;
-    padding: 1.5rem;
-    font-size: 1.8rem;
-    border: none;
-    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
-  }
-  
-  .end-form-Container input::placeholder {
-    color: #aaa;
-  }
-  
-  #endText {
-    font-size: 2.4rem;
-    color: #fff;
-    text-align: center;
-  }
-  
-  #scoreDisplay{
-    color: rgb(83, 83, 83);
-    font-family: "Paytone One", sans-serif;
-    font-weight: 400;
-  }
-  #username {
-    margin-bottom: 3rem;
-    width: 100%;
-    outline: none;
-  }
-  
-  #saveScoreBtn {
-    font-size: 1.8rem;
-    border: none;
-  }
-  
-  #highScoresList {
-    list-style: none;
-    margin-bottom: 4rem;
-  }
-  
-  .high-score {
-    font-size: 2.8rem;
-    margin-bottom: 0.5rem;
-  }
+.quiz {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.end-form-Container {
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.end-form-Container input {
+  margin-bottom: 1rem;
+  width: 80%; /* Adjusted width to fit better */
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  border: none;
+  box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+}
+
+.end-form-Container input::placeholder {
+  color: #aaa;
+}
+
+#endText {
+  font-size: 2.4rem;
+  color: black;
+  text-align: center;
+}
+
+#scoreDisplay {
+  color: rgb(59, 200, 74);
+  font-weight: 400;
+  font-style: normal;
+}
+
+#score{
+  color: rgb(59, 200, 74);
+  font-weight: 400;
+  font-style: normal;
+}
+
+#username {
+  margin-bottom: 3rem;
+  width: 80%; 
+  max-width: 20rem; 
+  outline: none;
+}
+
+#finalScore {
+  color: rgb(59, 200, 74);
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: #04AA6D 1px 0 10px;
+  text-align: center;
+}
+
+#saveScoreBtn {
+  font-size: 1.8rem;
+  border: none;
+  background-color: rgb(83, 83, 83);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+#highScoresList {
+  list-style: none;
+  margin-bottom: 4rem;
+}
+
+.high-score {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+  color: rgb(255, 60, 60);
+}
+
+.reset-btn {
+  font-size: 1.8rem;
+  padding: 10px;
+  border-radius: 12px;
+  color: rgb(83, 83, 83);
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+}
+
+.btn-end {
+  margin-left: 5rem;
+  font-size: 1.8rem;
+  padding: 10px;
+  border-radius: 12px;
+  color: rgb(83, 83, 83);
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  margin-bottom: 3rem;
+}
+
+/* Progress Bar */
+#hud{
+  display: flex;
+  justify-content: space-between;
+}
+
+.hud-prefix {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.hud-main-text {
+  text-align: right;
+}
+
+#progressBar {
+  width: 20rem;
+  height: 4rem;
+  border: 0.2rem solid rgb(59, 200, 74);
+  margin-top: 1.5rem;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+#progressBarFull {
+  height: 100%;
+  background: rgb(59, 200, 74);
+  width: 0%;
+}
