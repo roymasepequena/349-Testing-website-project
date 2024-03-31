@@ -199,11 +199,8 @@ const questions = [
     ]
 }]
 
-const SCORE_POINTS = 10
-const MAX_QUESTIONS = 10
 let score = 0
 let shuffleQuestions, currentQuestion
-let availableQuestions = []
 let randomizedQuestions = randomQuestion(questions, 10)
 
 
