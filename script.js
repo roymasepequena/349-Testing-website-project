@@ -6,7 +6,7 @@ const answerButtonsElement = document.getElementById('answer-btns')
 const scoreDisplay = document.getElementById('score')
 const progressBarFull = document.querySelector('#progressBarFull')
 
-
+// Array of questions
 const questions = [
 // 1
 {
@@ -203,7 +203,7 @@ let score = 0
 let shuffleQuestions, currentQuestion
 let randomizedQuestions = randomQuestion(questions, 10)
 
-
+// This starts the quiz
 startButton.addEventListener('click', startQuizze);
 nextButton.addEventListener('click', () => {
     currentQuestion++
@@ -211,6 +211,7 @@ nextButton.addEventListener('click', () => {
 
 })
 
+// Randomize questions so they are not always the same
 function randomQuestion(array, numItems) {
     let questionsArray = []
     let length = array.length
@@ -227,6 +228,7 @@ function randomQuestion(array, numItems) {
     return questionsArray
 }
 
+// Lets the user start the quiz
 function startQuizze() {
     startButton.classList.add('hidden')
     score = 0
@@ -237,6 +239,7 @@ function startQuizze() {
     nextQuestion()
 }
 
+// This displays the next question
 function nextQuestion() {
     if(currentQuestion >= shuffleQuestions.length){
         localStorage.setItem('mostRecentScore', score)
@@ -272,6 +275,7 @@ function resetState() {
     }
 }
 
+// If the answer is correct or wrong the score is updated
 function chooseAnswer(e){
     const clickedButton = e.target
     const correct = clickedButton.dataset.correct
@@ -286,17 +290,19 @@ function chooseAnswer(e){
     nextButton.classList.remove('hidden')
 }
 
+// This display the updated the score
 function updateScore() {
     scoreDisplay.innerText = score + '/' + randomizedQuestions.length
 }
 
+// This updates the progress bar
 function updateprogressBarFull() {
     const progress = Math.round((currentQuestion / randomizedQuestions.length) * 100)
     progressBarFull.style.width = `${progress}%`
     scoreDisplay.innerText = score + '/' + randomizedQuestions.length
 }
 
-
+// Set the status of the answer
 function setStatus(element, correct) {
     clearStatus(element)
     if (correct) {
@@ -306,6 +312,7 @@ function setStatus(element, correct) {
     }
 }
 
+// This clears the status
 function clearStatus(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
