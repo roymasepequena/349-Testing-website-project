@@ -16,61 +16,25 @@
     </head>
 <body>
   <div class="quizze-header">
-    <nav class="navbar navbar-expand navbar-default bg-info">
-      <div class="container-fluid">
-      <a class="navbar-brand pb-2" href="#">Bootstrap 4</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-          <ul class="navbar-nav align-self-end flex-wrap" id="nav">
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Item</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Item</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Item</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Item</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Item</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Item</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Item10</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Item11</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Item12</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Item13</a>
-              </li>
-              <li class="nav-item dropdown d-none">
-                  <a class="nav-link" href="#" id="navbarDropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="navbar-toggler-icon"></span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-right bg-info" aria-labelledby="navbarDropdownMenu">
-                  </ul>
-              </li>
-          </ul>
-      </div>
-      </div>
-  </nav>
+    <nav class="navbar navbar-default" style="background-color: #cc0000ff;">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="home.html"><img src="images/quizzelogo.png" style="width:182px; height:49px; margin-top:10px; margin-left:15px"></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="quizzes.html"><button class="header-button" onclick="document.getElementById('quizzes-button').style.display='block'" 
+                        style="width:auto;">Quizzes</button></a>
+                </li>
+                <li>
+                    <a href="#"><button class="header-button" onclick="document.getElementById('login-button').style.display='block'" 
+                        style="width:auto;">Login</button></a>
+                </li>
+                <li>
+                    <a href="#"><button class="header-button" onclick="document.getElementById('signup-button').style.display='block'" 
+                        style="width:auto;">Sign Up</button></a>
+                </li>
+            </ul>
+    </nav>
     <div id="login-button" class="modal">
 
       <form class="modal-content animate">
