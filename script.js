@@ -58,13 +58,13 @@ const MAX_QUESTIONS = 5
 let score = 0
 let shuffleQuestions, currentQuestion
 let availableQuestions = []
+let start = false
 
 
 startButton.addEventListener('click', startQuizze);
 nextButton.addEventListener('click', () => {
     currentQuestion++
     nextQuestion()
-
 })
 
 function startQuizze() {
@@ -75,6 +75,7 @@ function startQuizze() {
     currentQuestion = 0
     questionBoxElement.classList.remove('hidden')
     nextQuestion()
+    start = true;
 }
 
 function nextQuestion() {
@@ -84,8 +85,10 @@ function nextQuestion() {
     }
     resetState()
     showQuestion(shuffleQuestions[currentQuestion])
-    currentQuestion++
-    updateprogressBarFull()
+    if (start)
+    {
+        updateprogressBarFull()
+    }
 }
 
 function showQuestion(question) {
@@ -120,7 +123,7 @@ function chooseAnswer(e){
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatus(button, button.dataset.correct)
     })
-    nextQuestion()
+    nextButton.classList.remove('hidden')
 }
 
 function updateScore() {
