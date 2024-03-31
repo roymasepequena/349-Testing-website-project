@@ -10,17 +10,17 @@ const progressBarFull = document.querySelector('#progressBarFull')
 const questions = [
 // 1
 {
-    question: 'What is our class code?',
+    question: 'Which CSS property is used to make text italic?',
     answers:[
-        {text: '349', correct: true},
-        {text: '362', correct: false},
-        {text: '411', correct: false},
-        {text: '449', correct: false}
+        {text: 'text-style', correct: false},
+        {text: 'font-style', correct: true},
+        {text: 'style', correct: false},
+        {text: 'font', correct: false}
     ]
 },
 //2
 {
-    question: "The class starts at 10 AM?",
+    question: "This class starts at 10 AM on Fridays.",
     answers: [
         {text: 'True', correct: true},
         {text: 'False', correct: false}
@@ -28,7 +28,7 @@ const questions = [
 },
 //3
 {
-    question: "Which coding languages are we learning?",
+    question: "Which coding languages are we learning in this course?",
     answers: [
         {text: 'JavaScript', correct: true},
         {text: 'HTML', correct: true},
@@ -40,7 +40,7 @@ const questions = [
 },
 //4
 {
-    question: 'We only meet once a week?',
+    question: 'HTML documents must always start with a <!DOCTYPE html> declaration.',
     answers: [
         {text: 'True', correct: true},
         {text: 'False', correct: false}
@@ -94,12 +94,12 @@ const questions = [
 },
 //10
 {
-    question: "What is the correct way to include an external JavaScript file named 'script.js' in an HTML document?",
+    question: "Which of the following is a key feature of Bootstrap?",
     answers: [
-        {text: "<script src='script.js' type='text/js'></script>", correct: false},
-        {text: "<js src='script.js'></js>", correct: false},
-        {text: "<script type='text/javascript' src='script.js'></script>", correct:true},
-        {text: "<script href='script.js'></script>", correct:false}
+        {text: "Server-side rendering", correct: false},
+        {text: "Static website generation", correct: false},
+        {text: "Responsive design", correct:true},
+        {text: "Object-oriented programming", correct:false}
     ]
 },
 //11
@@ -144,25 +144,25 @@ const questions = [
 {
     question: "Which JavaScript method is used to add a new item to the end of an array?",
     answers: [
-        {text: "push()", correct:true},
+        {text: "insert", correct:false},
         {text: "add()", correct:false},
         {text: "append()", correct:false},
-        {text: "insert()", correct:false}
+        {text: "push()", correct:true}
     ]
 },
 //16
 {
-    question: "What is the purpose of the CSS property 'float'?",
+    question: "Which CSS property is used to set the display behavior of an element ?",
     answers: [
-        {text: "It makes the text bold.", correct:false},
-        {text: "It moves an element to the left or right, allowing text and inline elements to wrap around it.", correct:true},
-        {text: "It changes the background color of an element.", correct:false},
-        {text: "It increases the font size.", correct:false}
+        {text: "display-mode", correct:false},
+        {text:"dipslay-type", correct:false},
+        {text: "display", correct:true},
+        {text:"display-style", correct:false}
     ]
 },
 //17
 {
-    question: "JavaScript is case-sensitive.",
+    question: "JavaScript is a case-sensitive programming language.",
     answers: [
         {text: "True", correct:true},
         {text: "False", correct:false}
@@ -173,25 +173,29 @@ const questions = [
     question: "Which HTML tag is used for creating an unordered list?",
     answers: [
         {text: "<ul>", correct:true},
-        {text: "<list", correct:false},
-        {text: "<ol", correct:false},
-        {text: "li", correct:false}
+        {text: "<list>", correct:false},
+        {text: "<ol>", correct:false},
+        {text: "<li>", correct:false}
     ]
 },
 //19
 {
-    question: "We are in the spring semester of 2025.",
+    question: "Which attribute is used to provide an alternative text for an image?",
     answers: [
-        {text: "True", correct:false},
-        {text:"False", correct:true}
+        {text: "src", correct:false},
+        {text:"title", correct:false},
+        {text: "desc", correct:false},
+        {text:"alt", correct:true}
     ]
 },
 //20
 {
-    question: "This project went well.",
+    question: "Which element is used to define the title of an HTML document?",
     answers: [
-        {text: "True", correct:true},
-        {text:"False", correct:false}
+        {text: "<header>", correct:false},
+        {text:"<h1>", correct:false},
+        {text: "<title>", correct:true},
+        {text:"<head>", correct:false}
     ]
 }]
 
