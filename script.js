@@ -61,7 +61,6 @@ nextButton.addEventListener('click', () => {
 })
 
 function startQuizze() {
-    console.log("it works")
     startButton.classList.add('hidden')
     score = 0
     updateScore()

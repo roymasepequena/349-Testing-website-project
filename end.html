@@ -2,11 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script defer src="script.js"></script>
+        <title>Enter Score | Quizze</title>
+        <link rel="icon" href="images/quizze-favicon.png"> 
 </head>
 <body>
+  <div class="quizze-header">
+    <nav class="navbar navbar-default" style="background-color: #cc0000ff;">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="home.html"><img src="images/quizzelogo.png" style="width:182px; height:49px; margin-top:10px; margin-left:15px"></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="quizzes.html"><button class="header-button" onclick="document.getElementById('quizzes-button').style.display='block'" 
+                        style="width:auto;">Quizzes</button></a>
+                </li>
+                <li>
+                    <a href="#"><button class="header-button" onclick="document.getElementById('login-button').style.display='block'" 
+                        style="width:auto;">Login</button></a>
+                </li>
+                <li>
+                    <a href="#"><button class="header-button" onclick="document.getElementById('signup-button').style.display='block'" 
+                        style="width:auto;">Sign Up</button></a>
+                </li>
+            </ul>
+    </nav>
+    <div id="login-button" class="modal">
+
+      <form class="modal-content animate">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('login-button').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="images/quizzered.png" alt="Avatar" class="avatar">
+        </div>
+    
+        <div class="login-container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+            
+          <a href="quizzes.html"><button class="form-button">Login</button></a>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+    
+        <div class="login-container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('login-button').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw"><a href="#">Forgot password?</a></span>
+        </div>
+      </form>
+      </div>
+  <div id = "signup-button" class="modal">
+
+      <form class="modal-content animate">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('signup-button').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="images/quizzered.png" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="login-container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <a href="quizzes.html"><button class="form-button">Sign Up</button></a>
+          </div>
+      
+          <div class="login-container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('login-button').style.display='none'" class="cancelbtn">Cancel</button>
+          </div>
+        </form>
+  </div>
+</div>
   <div class = "container">
     <div id="end" class ="flex-center flex-column">
         <h1 id="finalScore">0</h1>
@@ -15,9 +94,6 @@
             <input type="text" name="name" id="username" placeholder="Enter Your Name">
             <button class="btn" type="submit" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>Save</button>
         </form>
-        <a class="btn" href="home.html">Go Home</a>
-        <a class="btn" href="Quizze.html">Play Again</a>
-        <a class="btn" href="quizzes.html">High Scores</a>
     </div>
   </div>
   <script src="end.js"></script>

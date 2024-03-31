@@ -11,20 +11,24 @@
     margin: 0;
     display: flex;
     width: 100vw;
-    height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: white
 }
 
 .container
 {
-    width: 800px;
+    width: 60vw;
     max-width: 80%;
     background-color:lightgray;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
+}
+
+#quizbox
+{
+  margin-top: 4vh;
+  height: 70vh;
 }
 
 .btns-grid{
@@ -244,7 +248,7 @@ input[type=text], input[type=password] {
   text-align: left;
 }
 
-.home{
+body{
   background-image: url('images/background.png');
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -321,7 +325,7 @@ input[type=text], input[type=password] {
     font-weight: 400;
     font-style: normal;
     max-width: 50vw;
-    margin-left: 30px;
+    margin-left: 3vw;
     text-align: left;
 }
 
@@ -336,7 +340,7 @@ input[type=text], input[type=password] {
     color: rgb(83, 83, 83);
     cursor: pointer;
     font-family: "Paytone One", sans-serif; 
-    font-size: 3.5vw;
+    font-size: 5vh;
     height: 15vh;
     width: 80vw;
     list-style: none;
@@ -365,7 +369,7 @@ input[type=text], input[type=password] {
   .quizzes-button:disabled {
     background-color: #eeeeeeff;
     border-color: rgba(27, 31, 35, 0.15);
-    color: FF4742;
+    color: #FF4742;
     cursor: default;
   }
   
@@ -385,6 +389,12 @@ input[type=text], input[type=password] {
   
   .quizzes-button:-webkit-details-marker {
     display: none;
+  }
+
+  .leaderboard
+  {
+    margin-left: 12vw;
+    max-width: 80vw;
   }
 
 
