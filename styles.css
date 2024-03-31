@@ -124,10 +124,6 @@ input[type=text], input[type=password] {
     width: 100%;
   }
   
-  button:hover {
-    opacity: 0.8;
-  }
-  
   /* Extra styles for the cancel button */
   .cancelbtn {
     width: auto;
@@ -249,7 +245,7 @@ input[type=text], input[type=password] {
   text-align: left;
 }
 
-.body{
+body{
   background-image: url('images/background.png');
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -369,14 +365,14 @@ input[type=text], input[type=password] {
   }
   
   .quizzes-button:disabled {
-    background-color: #eeeeeeff;
+    background-color: #ffffff;
     border-color: rgba(27, 31, 35, 0.15);
     color: #FF4742;
     cursor: default;
   }
   
   .quizzes-button:active {
-    background-color: #eeeeeeff;
+    background-color: #ffffff;
     box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
     transition: none 0s;
   }
@@ -440,7 +436,7 @@ input[type=text], input[type=password] {
 }
 
 #scoreDisplay {
-  color: rgb(59, 200, 74);
+  color: rgb(83, 83, 83);
   font-weight: 400;
   font-style: normal;
 }
@@ -486,7 +482,6 @@ input[type=text], input[type=password] {
   font-size: 2.8rem;
   margin-bottom: 0.5rem;
   align-items: center;
-  color: rgb(255, 60, 60);
 }
 
 .reset-btn {
